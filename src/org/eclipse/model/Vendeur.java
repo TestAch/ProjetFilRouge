@@ -11,7 +11,7 @@ public class Vendeur extends Utilisateur {
 // constructeur : 
 
 	
-	public Vendeur(String id, String nom, String prenom, String adresseMail, String numeroDeTelephone, String login,
+	public Vendeur(int id, String nom, String prenom, String adresseMail, String numeroDeTelephone, String login,
 			String motDePasse, Adresse[] adresses, Produit[] produits) {
 		super(id, nom, prenom, adresseMail, numeroDeTelephone, login, motDePasse, adresses);
 		this.produits = produits;

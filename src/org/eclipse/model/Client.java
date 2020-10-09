@@ -8,9 +8,9 @@ public class Client extends Utilisateur {
 	private Panier panier;
 
 
-// constructeur
+// constructeur :
 	
-	public Client(String id, String nom, String prenom, String adresseMail, String numeroDeTelephone, String login,
+	public Client(int id, String nom, String prenom, String adresseMail, String numeroDeTelephone, String login,
 			String motDePasse, Adresse[] adresses, Commande[] commande, Panier panier) {
 		super(id, nom, prenom, adresseMail, numeroDeTelephone, login, motDePasse, adresses);
 		this.commande = commande;

@@ -2,6 +2,7 @@ package org.eclipse.service;
 
 import java.util.ArrayList;
 
+
 import org.eclipse.model.Produit;
 
 
@@ -11,12 +12,9 @@ public class ProduitService {
 
 // constructeur :
 
-//
 	public ProduitService() {
-		// TODO Auto-generated constructor stub
 		produits = new ArrayList<Produit>();
 	}
-//
 
 	public ProduitService(ArrayList<Produit> produits) {
 		super();
@@ -43,6 +41,8 @@ public class ProduitService {
 		produits.remove(produit);
 	}
 	
+	
+	// update :
 	public void update(Produit produit) {
 		for (Produit prod: produits) {
 			if (prod.getId() == produit.getId()) {
@@ -51,10 +51,36 @@ public class ProduitService {
 		}
 	}
 	
+	// meilleure méthode du update ? :
+	
+	//	public Object update(Produit produit) {
+	//        for(Produit produitIndividuel : this.produits) {
+	//			if(produitIndividuel.getId() == produit.getId()) {
+	//				this.produits.remove(produitIndividuel);
+	//				return this.save(produit);				
+	//			}
+	//		}
+	//		return false;		
+	//}
+		
+	//	public void update(int id, Produit produit) {		
+	//		for (int i = 0; i < produits.size(); i++) {		
+	//			Produit findProduitById = produits.get(i);
+	//					if (id == findProduitById.getId()) {		
+	//						produits.remove(findProduitById);				
+	//						produits.add(produit);		
+	//					}
+	//		}
+	//	}
+	
+	
+	
+	// findAll : 
 	public ArrayList<Produit> findAll() {
 		return produits;
 	}
 	
+	// findById : 
 	public Produit findById(int id) {
 		for (int i = 0; i < produits.size(); i++) {
 			Produit findProduitById = produits.get(i); 
@@ -64,14 +90,40 @@ public class ProduitService {
 		} return null;
 	}
 	
-//	public Produit findById(int id) {
-//		for (int i = 0; i < tableauDeProduit.size(); i++) {
-//			Produit findProduitById = tableauDeProduit.get(i);
-//			if (id == findProduitById.getId()) {
-//				return tableauDeProduit.get(i);
-//			}		}
-//		return null;	}
+	//	public Produit findById(int id) {
+	//		for (int i = 0; i < tableauDeProduit.size(); i++) {
+	//			Produit findProduitById = tableauDeProduit.get(i);
+	//			if (id == findProduitById.getId()) {
+	//				return tableauDeProduit.get(i);
+	//			}		}
+	//		return null;	}
 	
+	
+	
+	// produits disponibles : 
+	
+	//	public Produit disponibilite() {
+	//		Produit disponible [];
+	
+	//		for (int i = 0; i < produits.size(); i++) {
+	//			int produitdisponibilite = produits.get(i).getQuantiteEnStock();
+	//			if (produitdisponibilite > 0) {
+	//				disponible
+	//			}
+	//		}
+	//		return null;
+	//	}
+	
+	
+	public ArrayList<Produit> findByQuantiteEnStock() {
+		ArrayList<Produit> disponibles = new ArrayList<>();
+		for (Produit produit : produits) {
+			if (produit.getQuantiteEnStock() > 0) {
+				disponibles.add(produit);
+			}
+		}
+		return disponibles;
+	}
 	
 	
 // toString	:

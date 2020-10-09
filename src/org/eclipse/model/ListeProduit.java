@@ -1,6 +1,6 @@
 package org.eclipse.model;
 
-public class ListeProduits {
+public class ListeProduit {
 	private int idproduit; 
 	private int quantite;
 	private Panier panier;
@@ -10,7 +10,7 @@ public class ListeProduits {
 
 // constructeur : 
 	
-	public ListeProduits(int idproduit, int quantite, Panier panier, Produit produit) {
+	public ListeProduit(int idproduit, int quantite, Panier panier, Produit produit) {
 		super();
 		this.idproduit = idproduit;
 		this.quantite = quantite;
@@ -67,7 +67,7 @@ public class ListeProduits {
 	
 	@Override
 	public String toString() {
-		return "ListeProduits [idproduit=" + idproduit + ", quantite=" + quantite + ", panier=" + panier + ", produit="
+		return "ListeProduit [idproduit=" + idproduit + ", quantite=" + quantite + ", panier=" + panier + ", produit="
 				+ produit + "]";
 	}
 

@@ -5,19 +5,18 @@ import java.util.Arrays;
 public class Panier {
 	private int id;
 	private Client client;
-	private ListeProduits [] listeProduits;
+	private ListeProduit [] listeProduit;
 
 	
 
-// constructeur
+// constructeur :
 	
 
-
-	public Panier(int id, Client client, ListeProduits[] listeProduits) {
+	public Panier(int id, Client client, ListeProduit[] listeProduit) {
 		super();
 		this.id = id;
 		this.client = client;
-		this.listeProduits = listeProduits;
+		this.listeProduit = listeProduit;
 	}
 	
 
@@ -43,13 +42,13 @@ public class Panier {
 	}
 
 
-	public ListeProduits[] getListeProduits() {
-		return listeProduits;
+	public ListeProduit[] getListeProduit() {
+		return listeProduit;
 	}
 
 
-	public void setListeProduits(ListeProduits[] listeProduits) {
-		this.listeProduits = listeProduits;
+	public void setListeProduit(ListeProduit[] listeProduit) {
+		this.listeProduit = listeProduit;
 	}
 
 
@@ -60,7 +59,7 @@ public class Panier {
 
 	@Override
 	public String toString() {
-		return "Panier [id=" + id + ", client=" + client + ", listeProduits=" + Arrays.toString(listeProduits) + "]";
+		return "Panier [id=" + id + ", client=" + client + ", listeProduit=" + Arrays.toString(listeProduit) + "]";
 	}	
 
 

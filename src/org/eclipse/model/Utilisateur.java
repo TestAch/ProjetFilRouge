@@ -3,7 +3,7 @@ package org.eclipse.model;
 import java.util.Arrays;
 
 public class Utilisateur {
-	private String id;
+	private int id;
 	private String nom;
 	private String prenom;
 	private String adresseMail;
@@ -17,7 +17,7 @@ public class Utilisateur {
 // constructeur : 
 
 	
-	public Utilisateur(String id, String nom, String prenom, String adresseMail, String numeroDeTelephone, String login,
+	public Utilisateur(int id, String nom, String prenom, String adresseMail, String numeroDeTelephone, String login,
 			String motDePasse, Adresse[] adresses) {
 		super();
 		this.id = id;
@@ -34,13 +34,13 @@ public class Utilisateur {
 	
 // getters et setters : 	
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
 
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
