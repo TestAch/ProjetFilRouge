@@ -11,8 +11,8 @@ public class Client extends Utilisateur {
 // constructeur :
 	
 	public Client(int id, String nom, String prenom, String adresseMail, String numeroDeTelephone, String login,
-			String motDePasse, Adresse[] adresses, Commande[] commande, Panier panier) {
-		super(id, nom, prenom, adresseMail, numeroDeTelephone, login, motDePasse, adresses);
+			String motDePasse, String adresse, Commande[] commande, Panier panier, String type) {
+		super(id, nom, prenom, adresseMail, numeroDeTelephone, login, motDePasse, adresse, type);
 		this.commande = commande;
 		this.panier = panier;
 	}

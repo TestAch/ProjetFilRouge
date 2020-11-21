@@ -8,12 +8,14 @@ import org.eclipse.model.Produit;
 
 public class ProduitService {
 
-	private ArrayList<Produit> produits;
+	private ArrayList<Produit> produits = new ArrayList<Produit>();
 
 // constructeur :
 
 	public ProduitService() {
-		produits = new ArrayList<Produit>();
+		produits.add(new Produit(1, "Smartphone", "description produit", 199, 10, "www.lien1.html"));
+		produits.add(new Produit(2, "Mouse", "description produit2", 39, 30, "www.lien2.html"));
+		produits.add(new Produit(3, "Oscilloscope", "description produit3", 1299, 5, "www.lien3.html"));
 	}
 
 	public ProduitService(ArrayList<Produit> produits) {
@@ -51,7 +53,7 @@ public class ProduitService {
 		}
 	}
 	
-	// meilleure méthode du update ? :
+	// meilleure mï¿½thode du update ? :
 	
 	//	public Object update(Produit produit) {
 	//        for(Produit produitIndividuel : this.produits) {

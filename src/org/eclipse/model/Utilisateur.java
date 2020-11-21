@@ -1,6 +1,6 @@
 package org.eclipse.model;
 
-import java.util.Arrays;
+
 
 public class Utilisateur {
 	private int id;
@@ -10,7 +10,8 @@ public class Utilisateur {
 	private String numeroDeTelephone;
 	private String login;
 	private String motDePasse;
-	private Adresse [] adresses;
+	private String adresse;
+	private String type;
 
 
 
@@ -18,7 +19,7 @@ public class Utilisateur {
 
 	
 	public Utilisateur(int id, String nom, String prenom, String adresseMail, String numeroDeTelephone, String login,
-			String motDePasse, Adresse[] adresses) {
+			String motDePasse, String adresse, String type) {
 		super();
 		this.id = id;
 		this.nom = nom;
@@ -27,7 +28,8 @@ public class Utilisateur {
 		this.numeroDeTelephone = numeroDeTelephone;
 		this.login = login;
 		this.motDePasse = motDePasse;
-		this.adresses = adresses;
+		this.adresse = adresse;
+		this.type = type;
 	}
 
 	
@@ -118,30 +120,43 @@ public class Utilisateur {
 
 
 
-	public Adresse[] getAdresses() {
-		return adresses;
+	public String getAdresse() {
+		return adresse;
 	}
 
 
 
-	public void setAdresses(Adresse[] adresses) {
-		this.adresses = adresses;
+	public void setAdresses(String adresse) {
+		this.adresse = adresse;
 	}
+	
+	public String getType() {
+		return type;
+	}
+
+
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+
 
 
 
 	
 // toString : 
 	
-	
-	
 	@Override
 	public String toString() {
 		return "Utilisateur [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", adresseMail=" + adresseMail
 				+ ", numeroDeTelephone=" + numeroDeTelephone + ", login=" + login + ", motDePasse=" + motDePasse
-				+ ", adresses=" + Arrays.toString(adresses) + "]";
+				+ ", adresse=" + adresse + ", type=" + type + "]";
 	}
-	
+
+
+
+
 	
 
 }
